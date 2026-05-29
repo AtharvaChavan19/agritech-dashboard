@@ -1,0 +1,45 @@
+# Node.js / React (Frontend) dependency and build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.eslintcache
+
+# Python (Backend) virtualenv, caches, and compiles
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/**/*.so
+backend/venv/
+backend/.venv/
+backend/env/
+backend/ENV/
+backend/dist/
+backend/build/
+backend/*.egg-info/
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+
+# Local configuration files
+.env
+.env.local
+.env.*.local
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Prevent uploading mock files, but keep the folder structure
+backend/uploads/*
+!backend/uploads/.gitkeep
