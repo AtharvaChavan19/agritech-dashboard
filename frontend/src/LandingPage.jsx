@@ -63,7 +63,15 @@ function LandingPage({ onNavigate }) {
                 <p className="card-description">
                   ML based identification and mapping of weed species to optimize herbicide application and crop health.
                 </p>
-                <a href="#weed-tool" className="card-link" id="link-weed-tool">
+                <a
+                  href="#weed-tool"
+                  className="card-link"
+                  id="link-weed-tool"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('weed-detector');
+                  }}
+                >
                   <span>Open Tool</span>
                   <ArrowRight size={16} />
                 </a>

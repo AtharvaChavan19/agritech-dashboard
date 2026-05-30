@@ -1,0 +1,48 @@
+.current-activity {
+  grid-area: current-activity;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.activity-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.activity-label {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.activity-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.task-active {
+  color: var(--status-active);
+}
+
+.progress-section {
+  margin-top: auto;
+}
+
+.progress-bar-container {
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 4px;
+}

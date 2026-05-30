@@ -113,7 +113,7 @@ function GapDashboard({ onNavigate }) {
             <Grid size={18} />
             <span>Gap Detector</span>
           </button>
-          <button className="menu-item" onClick={() => { }} id="menu-weed-detector">
+          <button className="menu-item" onClick={() => onNavigate('weed-detector')} id="menu-weed-detector">
             <Sprout size={18} />
             <span>Weed Detector</span>
           </button>

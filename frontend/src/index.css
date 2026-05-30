@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   padding-top: 140px;
   padding-bottom: 80px;
-  background: url('./assets/plantation.png') no-repeat center center;
+  background: url('./gap identification/assets/plantation.png') no-repeat center center;
   background-size: cover;
 }
 
@@ -219,6 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Cards Grid */
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -261,12 +262,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 8px;
 }
 
-.card-title {
+.card-title-gap {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 8px;
   color: var(--color-dark);
 }
+
+.card-title-weed {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 
 .card-description {
   font-family: var(--font-body);
@@ -1284,3 +1295,71 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+/* ==========================================
+   WEED DASHBOARD STYLES (repo 2)
+   ========================================== */
+
+/* Repo 2 custom properties — kept as separate named variables to avoid
+   overriding repo 1's theme while remaining accessible project-wide */
+:root {
+  --primary-color: #1b4d3e;
+  --status-active: #2e7d32;
+  --bg-color: #f4f6f8;
+  --card-bg: #ffffff;
+  --text-main: #333333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --accent-color: #d1e7dd;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Dashboard container grid layout */
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "header header header"
+    "latest-spray latest-spray field-map"
+    "current-activity mission-report activity-log"
+    "summary summary summary";
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "header header"
+      "latest-spray latest-spray"
+      "field-map activity-log"
+      "current-activity mission-report"
+      "summary summary";
+  }
+}
+
+.weed-dashboard-shell {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.weed-dashboard-shell .card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.weed-dashboard-shell .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

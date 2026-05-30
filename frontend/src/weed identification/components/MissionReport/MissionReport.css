@@ -1,0 +1,54 @@
+.mission-report {
+  grid-area: mission-report;
+  display: flex;
+  flex-direction: column;
+}
+
+.report-desc {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.report-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.mission-report .btn.btn-primary {
+  background: #1b3d2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.mission-report .btn.btn-primary:hover {
+  background: #152e24;
+  transform: none;
+  box-shadow: none;
+}
+
+.mission-report .btn.btn-outline {
+  background: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.mission-report .btn.btn-outline:hover {
+  background: #f0f7f3;
+  transform: none;
+  box-shadow: none;
+}
