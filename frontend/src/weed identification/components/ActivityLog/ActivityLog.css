@@ -1,0 +1,107 @@
+.activity-log {
+  grid-area: activity-log;
+  display: flex;
+  flex-direction: column;
+  height: 380px; /* Fixed height to prevent growth */
+}
+
+.log-container {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.log-item {
+  display: flex;
+  gap: 15px;
+  padding: 18px 0;
+  border-bottom: 1px solid #f0f0f0;
+  min-height: 85px; /* Ensure consistent spacing for 3 items */
+}
+
+.log-item:last-child {
+  border-bottom: none;
+}
+
+.log-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.log-indicator.warning { background: #c62828; }
+.log-indicator.success { background: #2e7d32; }
+
+.log-content {
+  flex: 1;
+}
+
+.log-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.log-message {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.log-time {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.log-detail {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.log-scroll-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #eee;
+}
+
+.log-scroll-btn {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 6px;
+  cursor: pointer;
+  color: #888;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-scroll-btn:hover:not(:disabled) {
+  background: #eee;
+  color: var(--primary-color);
+}
+
+.log-scroll-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.no-logs {
+  font-size: 0.85rem;
+  color: #aaa;
+  text-align: center;
+  margin-top: 40px;
+}
