@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Sprout, LayoutGrid, ArrowRight } from 'lucide-react';
 
-function LandingPage() {
+function LandingPage({ onNavigate }) {
   const [activeTab, setActiveTab] = useState('Solutions');
 
   const navItems = ['Solutions', 'Support'];
@@ -15,7 +15,7 @@ function LandingPage() {
             <Sprout size={24} strokeWidth={2.5} />
             <span>AgriTech</span>
           </a>
-          
+
           <ul className="nav-links">
             {navItems.map((item) => (
               <li key={item}>
@@ -33,10 +33,10 @@ function LandingPage() {
               </li>
             ))}
           </ul>
-          
+
           <div className="nav-actions">
             <a href="#login" className="btn-link" id="nav-login-btn">Login</a>
-            <button className="btn-primary" id="nav-get-started-btn">Get Started</button>
+            <button className="btn-primary" id="nav-get-started-btn" onClick={() => onNavigate('gap-detector')}>Get Started</button>
           </div>
         </nav>
       </header>
@@ -51,7 +51,7 @@ function LandingPage() {
             <p className="hero-subtitle" id="main-hero-subheading">
               Harness advanced satellite imagery and computer vision to monitor plantation health with sub-meter accuracy.
             </p>
-            
+
             {/* Features Cards Grid */}
             <div className="cards-grid">
               {/* Weed Detector Card */}
@@ -61,7 +61,7 @@ function LandingPage() {
                 </div>
                 <h2 className="card-title">Weed Detector</h2>
                 <p className="card-description">
-                  AI-powered identification and mapping of invasive weed species to optimize herbicide application and crop health.
+                  ML based identification and mapping of weed species to optimize herbicide application and crop health.
                 </p>
                 <a href="#weed-tool" className="card-link" id="link-weed-tool">
                   <span>Open Tool</span>
@@ -78,7 +78,15 @@ function LandingPage() {
                 <p className="card-description">
                   Precision detection of plantation gaps and missing plants from aerial imagery to ensure maximum land utilization.
                 </p>
-                <a href="#gap-tool" className="card-link" id="link-gap-tool">
+                <a
+                  href="#gap-tool"
+                  className="card-link"
+                  id="link-gap-tool"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('gap-detector');
+                  }}
+                >
                   <span>Open Tool</span>
                   <ArrowRight size={16} />
                 </a>
@@ -96,7 +104,7 @@ function LandingPage() {
               </p>
               <div className="cta-actions">
                 <button className="btn-primary" id="btn-cta-demo">Demo</button>
-                <button className="btn-secondary" id="btn-cta-explore">Explore Platform</button>
+                <button className="btn-secondary" id="btn-cta-explore" onClick={() => onNavigate('gap-detector')}>Explore Platform</button>
               </div>
             </div>
           </div>
@@ -110,14 +118,14 @@ function LandingPage() {
             <a href="#" className="footer-logo" id="footer-logo-link">AgriTech</a>
             <p className="footer-description">Precision analytics for the next green revolution.</p>
           </div>
-          
+
           <ul className="footer-links">
             <li><a href="#privacy" className="footer-link" id="link-privacy">Privacy</a></li>
             <li><a href="#terms" className="footer-link" id="link-terms">Terms</a></li>
           </ul>
-          
+
           <p className="footer-copyright" id="footer-copyright-text">
-            
+
           </p>
         </div>
       </footer>
